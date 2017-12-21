@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<div id="root">
+
+</div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  const rootElement = document.getElementById('root')
+
+  function Message({message}) {
+      // if (!message) {
+      //     return React.createElement('div', null, 'No Message')
+      // }
+      // return message ? React.createElement('div', null, message) :
+      //   React.createElement('div', null, 'No Message')
+      return (
+          <div>
+            { message ? (
+                <div>{message}</div>
+            ) : (
+                <div>No Message</div>
+            )}
+          </div>
+      )
+  }
+
+  ReactDOM.render(
+      <Message message={null} />,
+      rootElement)
+</script>
