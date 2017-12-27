@@ -7,11 +7,17 @@
 <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/babel">
 
-  function Message({message}) {
-      return ()
-  }
+function Message() {
+    return (
+        <div>
 
-  ReactDOM.render(
-      <Message message={null} />,
-      document.getElementById('root'))
+        </div>
+    )
+}
+
+const element = <Message />
+
+ReactDOM.render(
+    element,
+    document.getElementById('root'))
 </script>
